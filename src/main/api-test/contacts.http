@@ -1,0 +1,38 @@
+### Create contact
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Ann",
+  "lastName": "Bier",
+  "email": "Ann.Bier@example.com",
+  "phone": "747-386-5058",
+  "address": {
+    "city": "Toronto",
+    "street": "6 Lakewood Parkway"
+  }
+}
+
+### Get all contact
+GET http://localhost:8080/contacts
+
+### Get contact by Id
+GET http://localhost:8080/contacts/1
+
+### Update contact
+PUT http://localhost:8080/contacts/1
+Content-Type: application/json
+
+{
+  "firstName": "Ann",
+  "lastName": "Bier",
+  "email": "Ann.Bier@gmail.com",
+  "phone": "747-386-5058",
+  "address": {
+    "city": "Montreal",
+    "street": "6 Lakewood Parkway"
+  }
+}
+
+### Delete contact by Id
+DELETE http://localhost:8080/contacts/1

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: contact-service
+
+management:
+  endpoints:
+    web:
+      base-path: /monitoring
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: 'ALWAYS'
