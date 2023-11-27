@@ -1,6 +1,9 @@
 spring:
   application:
     name: contact-service
+  threads:
+    virtual:
+      enabled: true
 
 management:
   endpoints:
