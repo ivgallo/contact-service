@@ -43,13 +43,13 @@ public class ContactController {
     }
 
     @GetMapping("/{id}")
-    public Contact getContact(@PathVariable("id") Integer id) {
+    public Contact getContact(@PathVariable Integer id) {
         return contactRepository.findById(id).
                 orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND, "The contact " + id + " does not exist"));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Contact> updateContact(@PathVariable("id") Integer id, @RequestBody @Valid Contact contact){
+    public ResponseEntity<Contact> updateContact(@PathVariable Integer id, @RequestBody @Valid Contact contact){
 
         if (!contactRepository.existsById(id)) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "The contact " + id + " does not exist");
@@ -63,7 +63,7 @@ public class ContactController {
 
 
     @DeleteMapping("/{id}")
-    public void deleteContact(@PathVariable("id") Integer id){
+    public void deleteContact(@PathVariable Integer id){
 
         if (!contactRepository.existsById(id)) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "The contact " + id + " does not exist");
