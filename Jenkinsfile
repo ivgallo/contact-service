@@ -5,7 +5,7 @@ pipeline {
         REGISTRY    = 'localhost:5000'
         IMAGE_NAME  = 'contact-service'
         IMAGE_TAG   = "${BUILD_NUMBER}"
-        INFRA_REPO  = 'git@github.com:ivgallo/risk-platform-infra.git'
+        INFRA_REPO  = 'git@github.com:ivgallo/app-infra.git'
     }
 
     stages {
