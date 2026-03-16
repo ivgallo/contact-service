@@ -6,6 +6,7 @@ pipeline {
         IMAGE_NAME  = 'contact-service'
         IMAGE_TAG   = "${BUILD_NUMBER}"
         INFRA_REPO  = 'git@github.com:ivgallo/app-infra.git'
+        KUBECONFIG  = '/var/jenkins_home/.kube/config'
     }
 
     stages {
